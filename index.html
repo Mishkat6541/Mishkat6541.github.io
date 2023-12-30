@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pixel Pedometer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        .prem {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: greenyellow;
+            font-size: 65px;
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            /* Adjust as needed for higher positioning */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .prem2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 35px;
+            position: absolute;
+            top: 130px;
+            /* Adjust as needed for higher positioning */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .prem3 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: yellow;
+            font-size: 20px;
+        }
+
+        .prem4 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: yellow;
+            font-size: 20px;
+
+        }
+
+
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Style for the container holding both images */
+        .image-container {
+            position: relative;
+
+            width: 225px;
+            overflow: hidden;
+            margin-top: 200px;
+            margin-bottom: 10px;
+        }
+
+        .db {
+            position: relatives;
+            width: auto;
+            height: auto;
+            left: 50%;
+            justify-content: center;
+
+        }
+
+        /* Style for the background image */
+        .background-image {
+            width: auto;
+            height: auto;
+            transition: transform 1s linear;
+        }
+
+        /* Style for the overlay image */
+        .overlay-image {
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        .image-container2 {
+            position: absolute;
+
+            width: 460px;
+            overflow: hidden;
+            margin-top: 200px;
+            margin-bottom: 10px;
+            top: 2300px;
+        }
+
+        /* Style for the background image */
+        .background-image2 {
+            width: auto;
+            height: auto;
+            transition: transform 1s linear;
+        }
+
+        /* Style for the overlay image */
+        .overlay-image2 {
+            position: relative;
+            width: auto;
+            height: auto;
+            top: -150px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+
+       
+
+        /* Green-yellow line at the bottom */
+        .segment-line {
+            position: relative;
+            width: 75%;
+            height: 2px;
+            justify-content: center;
+            background-color: greenyellow;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .segment-line2 {
+            position: absolute;
+            top: 2900px;
+            width: 75%;
+            height: 2px;
+            justify-content: center;
+            background-color: greenyellow;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .segment-line3 {
+            position: absolute;
+            top: 3500px;
+            width: 75%;
+            height: 2px;
+            justify-content: center;
+            background-color: greenyellow;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+
+        .unlocky
+        {
+            position: absolute;
+            top: 850px;
+            right: 300px;
+
+
+        }
+
+        .achievey
+        {
+
+            position: absolute;
+            top: 1620px;
+            left: 300px;
+        }
+        .unlock
+        {
+            position: relative;
+
+
+        }
+
+  
+
+        .test {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 40px;
+            /* Adjust as needed for higher positioning */
+            left: 50%;
+            padding-bottom: 40px;
+
+        }
+
+        .test2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: normal;
+            color: white;
+            font-size: 25px;
+            /* Adjust as needed for higher positioning */
+            left: 50%;
+            position: absolute;
+            top: 1000px;
+            left: 300px;
+            width: 300px; /* Adjust the width as needed */
+            padding: 10px; /* Add padding for space inside the box */
+            letter-spacing: 2px; /* Adjust the value as needed */
+            line-height: 1.5; /* Adjust the value as needed */
+
+        }
+
+        .test3 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: normal;
+            color: white;
+            font-size: 25px;
+            /* Adjust as needed for higher positioning */
+            left: 50%;
+            position: absolute;
+            top: 1700px;
+            left: 1050px;
+            width: 300px; /* Adjust the width as needed */
+            padding: 10px; /* Add padding for space inside the box */
+            letter-spacing: 2px; /* Adjust the value as needed */
+            line-height: 1.5; /* Adjust the value as needed */
+
+        }
+
+        .test4 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 45px;
+            position: absolute;
+            left: 50%;
+            top: 2350px;
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        .test5 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: greenyellow;
+            font-size:55px;
+            position: absolute;
+            left: 50%;
+            top: 3100px;
+            transform: translate(-50%, -50%);
+            
+
+        }
+
+        .test6 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size:30px;
+            position: absolute;
+            left: 50%;
+            top: 3610px;
+            transform: translate(-50%, -50%);
+            
+
+        }
+
+        .test7 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size:30px;
+            position: absolute;
+            left:50% ;
+            width: max-content;
+            top: 3710px;
+            transform: translate(-50%, -50%);
+            
+
+        }
+
+        .test8 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size:30px;
+            position: absolute;
+            left:50% ;
+            width: max-content;
+            top: 3810px;
+            transform: translate(-50%, -50%);
+            
+
+        }
+
+        .discord
+        {
+            position: absolute;
+            width: 40px;
+            height: 36px;
+            top: 10px;
+            right: 10px;
+
+        }
+
+        .discord2
+        {
+            position: absolute;
+            width: 40px;
+            height: 36px;
+            top: 3810px;
+            right: 600px;
+
+        }
+
+        .overlay-image3
+        {
+            position: relative;
+            left: 100px;
+            top: -200px;
+        }
+
+        .overlay-image4
+        {
+            position: relative;
+            right: 200px;
+            top: -230px;
+        }
+
+        .form
+        {
+            background: rgb(0, 255, 0);
+            display: flex;
+            width: fit-content;
+            position: absolute;
+            top: 3400px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+
+
+        }
+
+        form input
+        {
+            border: 0;
+            outline: none;
+            height:  60px;
+            width: 400px;
+            font-size: 16px;
+            padding:  5px 10px;
+            position: absolute;
+            top: 3400px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            
+
+        }
+
+        span
+        {
+            color: green;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 100px;
+            position: absolute;
+            top: 3440px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        form button
+        {
+            background: greenyellow;
+            border: none;
+            outline: none;
+            height: 70px;
+            width: 80px;
+            cursor:  pointer;
+            font-weight: bold;
+            position: absolute;
+            top: 3400px;
+            transform: translate(-50%, -50%);
+            right: 500px;
+        }
+
+        
+
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+
+            .prem,
+            .prem2 {
+                position: static;
+                transform: none;
+                text-align: center;
+                margin-top: 20px;
+                /* Adjust as needed for vertical spacing */
+            }
+
+            .image-container {
+                position: static;
+                margin-top: 20px;
+                /* Adjust as needed for vertical spacing */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div class="prem">Pixel Pedometer</div>
+
+        <div class="prem2">Gameified pedometer app </div>
+
+    </div>
+    
+
+    <a href="https://discord.gg/gNXDfCjc" target="_blank" rel="noopener noreferrer">
+        <img class="discord" src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
+          alt="Discord Icon">
+      </a>
+
+    <div class="image-container">
+        <!-- Background image -->
+        <img class="background-image" src="assets\pixil-frame-0 (51)_scaled_2x_pngcrushed.png" alt="Background Image">
+       
+        <div class="overlay-image">
+            <img  src="assets\ezgif.com-effects (1)_scaled_3x_minified (1).gif" alt="Overlay Image">
+        </div>
+        <!-- Overlay image -->
+        
+    </div>
+
+    <div class="db">
+        <div class="prem3">Steps taken: 10,036 </div>
+        <div class="prem4">Calories lost: 376 </div>
+    </div>
+
+
+    <!-- Green-yellow line at the bottom -->
+    <div class="segment-line"></div>
+
+    <div class="test"> Make Fitness fun </div>
+
+    <div class = "unlocky">
+        <img class="unlock" src="assets\Component 1.png">
+        
+    </div>
+
+    <div class = "achievey">
+        <img class="achieve" src="assets\Component 1 (2).png">
+        
+    </div>
+
+    <div class = "testy2">
+     <p class="test2"> Unlock and collect different characters using the points made from all the calories you have burnt - Try to collect them all! </p>
+      
+
+    </div>
+
+    <div class = "testy3">
+        <p class="test3"> Stride towards success as you earn achievements by burning calories—collect unique characters using the points you've amassed. Aim to unlock them all and showcase your dedication to conquering fitness milestones</p>
+         
+   
+       </div>
+       
+    
+    <div class="image-container2">
+    <!-- Background image -->
+    <img class="background-image2" src="assets\pixil-frame-0 (51)_scaled_2x_pngcrushed.png" >
+    
+    <img class="overlay-image2" src="assets\ezgif.com-effects (1)_scaled_3x_minified (1).gif" >
+
+    <img class="overlay-image3" src=" assets\ezgif.com-effects (2).gif" >
+
+    <img class="overlay-image4" src="assets\ezgif.com-resize_scaled_3x_minified.gif" >
+
+    </div>
+
+
+    <!-- Overlay image -->
+
+
+
+
+    <div class = "testy4">
+    <p class="test4">Grow your party!</p>
+         
+   
+    </div>
+
+    <div class="segment-line2"></div>
+
+    <p class="test5">Submit your interest - it would be greatly appreciated!</p>
+
+    <form name = "submit-to-google-sheet">
+        <input type = "email" name = "Email" placeholder = "Your Email" required>
+        <button type = "submit"> Submit  </button>
+
+
+    </form>
+    <span id = "msg"></span>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzlTiRoKl_cC5J_vQ-Q1aAJN4xnQPHFr23181iar-NAfO8nj4CBVPseYa86YN3mrphE/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = " Thank you very much! "
+                form.reset()
+                
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+
+    <div class="segment-line3"></div>
+
+    <div class = "testy6">
+        <p class="test6">Contact: Support@pixelpedometer.com </p>
+        
+             
+    </div>
+
+    <p class = "test7">By using this website, you agree to our <a href="terms.html">Terms and Conditions</a>.</p>
+
+    <p class = "test8">Join our discord: </p>
+
+    <a href="https://discord.gg/gNXDfCjc" target="_blank" rel="noopener noreferrer">
+        <img class="discord2" src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
+          alt="Discord Icon2">
+    </a>
+    
+
+
+
+
+    <script>
+        // JavaScript to create scrolling effect
+        const container = document.querySelector('.image-container');
+        const background = document.querySelector('.background-image');
+        const container2 = document.querySelector('.image-container2');
+        const background2 = document.querySelector('.background-image2');
+
+        let scrollPosition = 0;
+
+        function scrollBackground() {
+            scrollPosition += 0.1; // Adjust the scrolling speed by changing this value
+            background.style.transform = `translateX(${-scrollPosition}%)`;
+            background2.style.transform = `translateX(${-scrollPosition}%)`;
+
+
+            // Reset the scroll position to create an infinite loop
+            if (scrollPosition >= 65) {
+                scrollPosition = 0;
+                background.style.transition = 'none'; // Disable transition during reset
+                background2.style.transition = 'none';
+                background.style.transform = 'translateX(0%)';
+                background2.style.transform = 'translateX(0%)';
+
+                requestAnimationFrame(() => {
+                    background.style.transition = 'transform 1s linear'; // Re-enable transition after reset
+                    background2.style.transition = 'transform 1s linear';
+                });
+            }
+
+            requestAnimationFrame(scrollBackground);
+        }
+
+        // Start the scrolling animation
+        scrollBackground();
+    </script>
+
+</body>
+
+</html>
