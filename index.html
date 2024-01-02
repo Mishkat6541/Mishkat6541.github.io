@@ -4,13 +4,29 @@
 <head>
     <title>Pixel Pedometer</title>
 
-    <meta name = "viewport" content = "width=device-width, initial-scaler = 1.0">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 
     <style>
+        
+    
+
+
+        .html {
+            box-sizing: content-box;
+            overflow-x: hidden;    
+            overflow-y: visible;
+            max-width: 100% ;
+            list-style-type: none;
+            margin: 0;
+            display: inline-block;
+            -webkit-padding-start: 0;
+        
+
+        }
         .prem {
             font-family: 'Pixelify Sans', sans-serif;
             font-weight: bold;
@@ -18,9 +34,9 @@
             font-size: 65px;
             text-align: center;
             position: relative;
-            width: max-content;
             margin-top: 10px;
             margin-bottom: 10px;
+            width: max-content;
             /* Adjust as needed for higher positioning */
             left: 50%;
             transform: translateX(-50%);
@@ -39,12 +55,19 @@
             left: 50%;
             transform: translateX(-50%);
         }
+        
+        .last
+        {
+            display: flex;
+
+        }
 
         .prem3 {
             font-family: 'Pixelify Sans', sans-serif;
             font-weight: bold;
             color: yellow;
             font-size: 20px;
+            width: max-content;
         }
 
         .prem4 {
@@ -52,6 +75,8 @@
             font-weight: bold;
             color: yellow;
             font-size: 20px;
+            width: max-content;
+
 
         }
 
@@ -156,14 +181,12 @@
         }
 
         .segment-line3 {
-            position: absolute;
-            top: 3500px;
+            position: relative;
             width: 75%;
             height: 2px;
             justify-content: center;
             background-color: greenyellow;
             margin-top: 50px;
-            margin-bottom: 50px;
         }
 
 
@@ -261,9 +284,12 @@
             font-weight: bold;
             color: greenyellow;
             font-size:55px;
-            position: absolute;
+            position: relative;
             left: 50%;
-            top: 3100px;
+            margin-top: 200px;
+            width: 90%;
+            margin-bottom: 10px;
+ 
             transform: translate(-50%, -50%);
             
 
@@ -274,9 +300,11 @@
             font-weight: bold;
             color: white;
             font-size:30px;
-            position: absolute;
+            position: relative;
             left: 50%;
-            top: 3610px;
+            margin-top: 100px;
+            width: 90%;
+
             transform: translate(-50%, -50%);
             
 
@@ -287,10 +315,9 @@
             font-weight: bold;
             color: white;
             font-size:30px;
-            position: absolute;
+            position: relative;
+            width: 80%;
             left:50% ;
-            width: max-content;
-            top: 3710px;
             transform: translate(-50%, -50%);
             
 
@@ -301,11 +328,9 @@
             font-weight: bold;
             color: white;
             font-size:30px;
-            position: absolute;
             left:50% ;
-            top: 3810px;
-            width: 50%;
             transform: translate(-50%, -50%);
+            margin-bottom: 50px;
             
 
         }
@@ -325,8 +350,8 @@
             position: absolute;
             width: 40px;
             height: 36px;
-            top: 3810px;
-            right: 600px;
+            left: 55%;
+            
 
         }
 
@@ -349,8 +374,7 @@
             background: rgb(0, 255, 0);
             display: flex;
             width: fit-content;
-            position: absolute;
-            top: 3400px;
+            position: relative;
             transform: translate(-50%, -50%);
             left: 50%;
 
@@ -365,8 +389,7 @@
             width: 400px;
             font-size: 16px;
             padding:  5px 10px;
-            position: absolute;
-            top: 3400px;
+            position: relative;
             transform: translate(-50%, -50%);
             left: 50%;
             
@@ -379,8 +402,7 @@
             display: block;
             margin-top: 10px;
             margin-bottom: 100px;
-            position: absolute;
-            top: 3440px;
+            position: relative;
             transform: translate(-50%, -50%);
             left: 50%;
         }
@@ -390,14 +412,13 @@
             background: greenyellow;
             border: none;
             outline: none;
-            height: 70px;
+            height: 68px;
             width: 80px;
+            top: -2px;
             cursor:  pointer;
             font-weight: bold;
-            position: absolute;
-            top: 3400px;
+            position: relative;
             transform: translate(-50%, -50%);
-            right: 500px;
         }
 
         
@@ -597,12 +618,19 @@
 
     <p class = "test7">By using this website, you agree to our <a href="terms.html">Terms and Conditions</a>.</p>
 
-    <p class = "test8">Join our discord: </p>
+    <div class = last>
 
-    <a href="https://discord.gg/gNXDfCjc" target="_blank" rel="noopener noreferrer">
-        <img class="discord2" src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
-          alt="Discord Icon2">
-    </a>
+        <p class = "test8">Join our discord: </p>
+
+        <a href="https://discord.gg/gNXDfCjc" target="_blank" rel="noopener noreferrer">
+            <img class="discord2" src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
+              alt="Discord Icon2">
+        </a>
+
+
+    </div>
+
+  
     
 
 
